@@ -1,0 +1,15 @@
+warning: LF will be replaced by CRLF in config/cors.php.
+The file will have its original line endings in your working directory
+[1mdiff --git a/config/cors.php b/config/cors.php[m
+[1mindex 5e1a2d7..4c12c9b 100644[m
+[1m--- a/config/cors.php[m
+[1m+++ b/config/cors.php[m
+[36m@@ -19,7 +19,7 @@[m [mreturn [[m
+ [m
+     'allowed_methods' => ['*'],[m
+ [m
+[31m-    'allowed_origins' => ['*','*localhost:*'],[m
+[32m+[m[32m    'allowed_origins' => ['*localhost:8080*'],[m
+ [m
+     'allowed_origins_patterns' => [],[m
+ [m

@@ -1,0 +1,172 @@
+{
+	"variables": [],
+	"info": {
+		"name": "PROJETO SGR",
+		"_postman_id": "43b83b8d-f3f8-f405-8f6e-cfd49e8ce33f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CEO",
+			"description": "",
+			"item": [
+				{
+					"name": "API - Get ID",
+					"request": {
+						"url": "http://localhost:8000/api/ceo/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNDA1MjRjZWYzNTI2ODUyYzk3NmZkODJlMDg4Zjg2MmNlODVmNTgyMTQ0ZmJmOWViZTk5ZGVmNmJjNjBmYzYwZWM5MTQ3ZTAwMWMwNjQ5NDAiLCJpYXQiOjE2NDM4MDM1MjkuNDI1Mzc1LCJuYmYiOjE2NDM4MDM1MjkuNDI1Mzc4LCJleHAiOjE2NzUzMzk1MjkuNDE0OTkyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Mn4kZdOKiuHUnWOEAJLkMjwiXbYULb_KEXicMX-dYPwKHyIfuXQ9GMjTxARvh5cTR_UForFaalprEhw38K4ekYojDYaiVivGgVvDk2MeAus5iOO6fNrb38jbmAL-PviE4xiwHZowAO3h7sQ7I9ue_GYxwmhOsUGglrWetuW2eGCFh9DmkmkHPG5vjVb6zFcOdSe1yJ0YxD8icZS-4bWTdZDPSYZrBwibbfy38y2UM0_DfX5Rh8e4OGRFGZmn9mzbaBeYBM7gswfrLzpDSehUSFArb-FN_e2hCHjtSvhcIFxNiPXbP-W0kantp3jqEUKDx4BfN8ujvzV1Q-vc_4LHS26RH9SpjuSmKeLkNpwjLJLEI2tERGV80vWLX95NaClQUcPVvOm3smG-Oumku6ntoYcMAuHr_1baQ1f3QYAjpotr0yyvItm_OwA-Yw2pyz-5S4ZkISc6Meb-LbB57sdLS4JoJNwuAfMRZPRH7safUpBmYPfY7KXZ08kDk6BeTp21JLAZ7BKgmOPNJcehsm2qguCy2YkE0UQ7V2P-pF0EB1OHLTjNUpUvyinUbXjuRNJbQHpgv3GMCZWkbotv0GmhxT4Ca8YhobTIG89UvLwTJDN61wFNR44qw0UiUz6-pi_m8uFh2tXmpWMGukbcnzRa0uef3O1iH8-gI4-wiGVmikc",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Titulo\":\"A vida como ela é \",\n\t\"Subtitulo\": \"Nelson Rodrigues\",\n\t\"Autor\": \"Drama total\",\n\t\"Resumo\": \"Livro sobre orientação a objetos\",\n\t\"Capa\": \"\",\n\t\"Lista\": 1\n\t\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "API -  Create CEO",
+					"request": {
+						"url": "http://localhost:8000/api/ceo",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNDA1MjRjZWYzNTI2ODUyYzk3NmZkODJlMDg4Zjg2MmNlODVmNTgyMTQ0ZmJmOWViZTk5ZGVmNmJjNjBmYzYwZWM5MTQ3ZTAwMWMwNjQ5NDAiLCJpYXQiOjE2NDM4MDM1MjkuNDI1Mzc1LCJuYmYiOjE2NDM4MDM1MjkuNDI1Mzc4LCJleHAiOjE2NzUzMzk1MjkuNDE0OTkyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Mn4kZdOKiuHUnWOEAJLkMjwiXbYULb_KEXicMX-dYPwKHyIfuXQ9GMjTxARvh5cTR_UForFaalprEhw38K4ekYojDYaiVivGgVvDk2MeAus5iOO6fNrb38jbmAL-PviE4xiwHZowAO3h7sQ7I9ue_GYxwmhOsUGglrWetuW2eGCFh9DmkmkHPG5vjVb6zFcOdSe1yJ0YxD8icZS-4bWTdZDPSYZrBwibbfy38y2UM0_DfX5Rh8e4OGRFGZmn9mzbaBeYBM7gswfrLzpDSehUSFArb-FN_e2hCHjtSvhcIFxNiPXbP-W0kantp3jqEUKDx4BfN8ujvzV1Q-vc_4LHS26RH9SpjuSmKeLkNpwjLJLEI2tERGV80vWLX95NaClQUcPVvOm3smG-Oumku6ntoYcMAuHr_1baQ1f3QYAjpotr0yyvItm_OwA-Yw2pyz-5S4ZkISc6Meb-LbB57sdLS4JoJNwuAfMRZPRH7safUpBmYPfY7KXZ08kDk6BeTp21JLAZ7BKgmOPNJcehsm2qguCy2YkE0UQ7V2P-pF0EB1OHLTjNUpUvyinUbXjuRNJbQHpgv3GMCZWkbotv0GmhxT4Ca8YhobTIG89UvLwTJDN61wFNR44qw0UiUz6-pi_m8uFh2tXmpWMGukbcnzRa0uef3O1iH8-gI4-wiGVmikc",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"teste\",\n\t\"company_name\": \"Gestão de ALguma cois1a\", \n\t\"company_headquarters\": \"Livro sobre orientação a objetoss\",\n\t\"what_company_does\": \"eeee de Saude\",\n\t\"year\": 2020\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "API2 - PUT CEO",
+					"request": {
+						"url": "http://localhost:8000/api/ceo/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNDA1MjRjZWYzNTI2ODUyYzk3NmZkODJlMDg4Zjg2MmNlODVmNTgyMTQ0ZmJmOWViZTk5ZGVmNmJjNjBmYzYwZWM5MTQ3ZTAwMWMwNjQ5NDAiLCJpYXQiOjE2NDM4MDM1MjkuNDI1Mzc1LCJuYmYiOjE2NDM4MDM1MjkuNDI1Mzc4LCJleHAiOjE2NzUzMzk1MjkuNDE0OTkyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Mn4kZdOKiuHUnWOEAJLkMjwiXbYULb_KEXicMX-dYPwKHyIfuXQ9GMjTxARvh5cTR_UForFaalprEhw38K4ekYojDYaiVivGgVvDk2MeAus5iOO6fNrb38jbmAL-PviE4xiwHZowAO3h7sQ7I9ue_GYxwmhOsUGglrWetuW2eGCFh9DmkmkHPG5vjVb6zFcOdSe1yJ0YxD8icZS-4bWTdZDPSYZrBwibbfy38y2UM0_DfX5Rh8e4OGRFGZmn9mzbaBeYBM7gswfrLzpDSehUSFArb-FN_e2hCHjtSvhcIFxNiPXbP-W0kantp3jqEUKDx4BfN8ujvzV1Q-vc_4LHS26RH9SpjuSmKeLkNpwjLJLEI2tERGV80vWLX95NaClQUcPVvOm3smG-Oumku6ntoYcMAuHr_1baQ1f3QYAjpotr0yyvItm_OwA-Yw2pyz-5S4ZkISc6Meb-LbB57sdLS4JoJNwuAfMRZPRH7safUpBmYPfY7KXZ08kDk6BeTp21JLAZ7BKgmOPNJcehsm2qguCy2YkE0UQ7V2P-pF0EB1OHLTjNUpUvyinUbXjuRNJbQHpgv3GMCZWkbotv0GmhxT4Ca8YhobTIG89UvLwTJDN61wFNR44qw0UiUz6-pi_m8uFh2tXmpWMGukbcnzRa0uef3O1iH8-gI4-wiGVmikc",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"ALTERAD O teste\",\n\t\"company_name\": \"Gestão de ALguma cois1a\", \n\t\"company_headquarters\": \"Livro sobre orientação a objetoss\",\n\t\"what_company_does\": \"eeee de Saude\",\n\t\"year\": 2020\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "API - Create User",
+					"request": {
+						"url": "http://localhost:8000/api/user",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"admin\",\n\t\"password\": \"123\",\n\t\"email\":\"admin2@gmail.com\",\n\t\"password_confirmation\": \"123\",\n\t\"perfil_id\": 1\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API - Post Login",
+			"request": {
+				"url": "http://localhost:8000/api/auth",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"password\": \"sgr.2022.\",\n\t\"email\":\"ronielvb@gmail.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "API - Post Esqueceu Senha",
+			"request": {
+				"url": "http://localhost:8000/api/esqueceu-senha",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"ronielvb@gmail.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "API - Post Alterando Senha Token",
+			"request": {
+				"url": "http://localhost:8000/api/reset-senha",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"ronielvb@gmail.com\",\n\t\"token\":\"ded3f46a366d0758b45c2cc06c48838e54f6b1d23c08bb071440cc048a4a4f04\",\n\t\"password\":\"sgr.2022.\",\n\t\"password_confirmation\":\"sgr.2022.\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
