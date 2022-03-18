@@ -15,7 +15,7 @@ class ContratoController extends Controller
     {
 
     }
-    public function create(ContratoController  $request)
+    public function create(request  $request)
 
 
     {
