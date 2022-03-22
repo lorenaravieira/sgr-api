@@ -10,6 +10,8 @@ use App\Http\Controllers\Api\UsuarioController;
 use App\Http\Controllers\Api\ClienteController;
 use App\Http\Controllers\Api\ContratoController;
 use App\Http\Controllers\Api\ImobiliariaController;
+use App\Http\Controllers\API\ImovelController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -41,6 +43,11 @@ Route::middleware(['auth:api','can:firewall'])->group(function(){
     Route::put('/rota/{id}/edit', [AdministradorController::class, 'edit'])->name('rotaEdit');
     Route::get('/rota', [AdministradorController::class,'index'])->name('rotaIndex');
 
+    Route::post('/imovel', [ImovelController::class, 'create'])->name('imovelCreate');
+    Route::post('/imovel', [ImovelController::class, 'update'])->name('imovelUpdate');
+    Route::delete('/imovel', [ImovelController::class, 'destroy'])->name('imovelDestroy');
+    Route::get('/imovel', [ImovelController::class, 'index'])->name('imovelIndex');
+
     //lorena -  rotas usuario
     Route::get('/user/{id}' , [UsuarioController::class,'show'])->name('userShow');
     Route::post('/user' , [UsuarioController::class,'create'])->name('userCreate');
@@ -58,5 +65,6 @@ Route::middleware(['auth:api','can:firewall'])->group(function(){
     Route::post('/Imobiliaria', [ImobiliariaController::class, 'update'])->name('imobiliariaUpdate');
     Route::get('/Imobiliaria', [ImobiliariaController::class, 'list'])->name('imobiliariaList');
     Route::delete('/Imobiliaria', [ImobiliariaController::class, 'delete'])->name('imobiliariaDelete');
+
 });
 
