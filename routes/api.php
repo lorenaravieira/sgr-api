@@ -9,7 +9,7 @@ use App\Http\Controllers\Api\AdministradorController;
 use App\Http\Controllers\Api\UsuarioController;
 use App\Http\Controllers\Api\ClienteController;
 use App\Http\Controllers\Api\ContratoController;
-
+use App\Http\Controllers\Api\ImobiliariaController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -53,5 +53,10 @@ Route::middleware(['auth:api','can:firewall'])->group(function(){
     Route::get('/cliente' , [UsuarioController::class,'index'])->name('clienteIndex');
 
     Route::post('/contrato', [ContratoController::class, 'create'])->name('contratoCreate');
+
+    Route::post('/Imobiliaria', [ImobiliariaController::class, 'create'])->name('imobiliariaCreate');
+    Route::post('/Imobiliaria', [ImobiliariaController::class, 'update'])->name('imobiliariaUpdate');
+    Route::get('/Imobiliaria', [ImobiliariaController::class, 'list'])->name('imobiliariaList');
+    Route::delete('/Imobiliaria', [ImobiliariaController::class, 'delete'])->name('imobiliariaDelete');
 });
 
