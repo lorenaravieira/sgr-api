@@ -8,7 +8,7 @@ use App\Models\Cliente;
 
 class ClienteController extends Controller
 {
-    public function create(ClienteController $request)
+    public function create(Request $request)
     {
         $data = $request->all();
 
@@ -19,9 +19,9 @@ class ClienteController extends Controller
 
     }
 
-    public function update(Request $request, Cliente $cliente)
+    public function update(Request $request,$id)
     {
-        $cliente->update($request->all());
+        $cliente= Cliente::findOrFail($id)->update($request->all());
 
         return response([ 'cliente' => $cliente, 'message' => 'Created successfully'], 200);
     }

@@ -8,7 +8,7 @@ use App\Models\Imobiliaria;
 
 class ImobiliariaController extends Controller
 {
-     public function create(ImobiliariaController $request)
+     public function create(request $request)
         {
             $data = $request->all();
 
@@ -20,23 +20,25 @@ class ImobiliariaController extends Controller
         }
 
 
-    public function update(Request $request, Imobiliaria $imobiliaria)
+    public function update(Request $request,$id)
     {
-        $imobiliaria->update($request->all());
+
+        $imobiliaria= Imobiliaria::findOrFail($id)->update($request->all());
 
         return response([ 'imobiliaria' => $imobiliaria, 'message' => 'Created successfully'], 200);
     }
 
-    public function list (Request $request)
+    public function index ()
     {
-        $dados = Imobiliaria::find($request->imobiliaria);
-        return response([ 'imobiliaria' => $dados, 'message' => 'Retrieved successfully'], 200);
+        $imobiliaria = Imobiliaria::all();
+        return response([ 'imobiliaria' => $imobiliaria, 'message' => 'Retrieved successfully'], 200);
     }
 
 
-    public function destroy(Imobiliaria $imobiliaria)
+    public function destroy($id)
     {
-        $imobiliaria->delete();
+        Imobiliaria::findOrFail($id)->delete();
+
         return response(['message' => 'Deleted']);
     }
 
