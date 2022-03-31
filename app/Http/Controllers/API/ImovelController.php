@@ -16,14 +16,14 @@ class ImovelController extends Controller
         return response(['imovel' => $imovel, 'message' => 'Created successfully'], 200);
     }
 
-    public function update(Request $request, Imovel $imovel){
-        $imovel->update($request->all());
+    public function update(Request $request, $id){
+        $imovel = Imovel::find($id)->update($request->all());
 
         return response(['imovel' => $imovel, 'message' => 'Created successfully'], 200);
     }
 
-    public function destroy(Imovel $imovel){
-        $imovel->delete();
+    public function destroy($id){
+        Imovel::find($id)->delete();
         return response(['message' => 'Deleted']);
     }
 

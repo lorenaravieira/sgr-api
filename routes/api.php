@@ -44,8 +44,8 @@ Route::middleware(['auth:api','can:firewall'])->group(function(){
     Route::get('/rota', [AdministradorController::class,'index'])->name('rotaIndex');
 
     Route::post('/imovel', [ImovelController::class, 'create'])->name('imovelCreate');
-    Route::post('/imovel', [ImovelController::class, 'update'])->name('imovelUpdate');
-    Route::delete('/imovel', [ImovelController::class, 'destroy'])->name('imovelDestroy');
+    Route::put('/imovel/{id}', [ImovelController::class, 'update'])->name('imovelUpdate');
+    Route::delete('/imovel/{id}', [ImovelController::class, 'destroy'])->name('imovelDestroy');
     Route::get('/imovel', [ImovelController::class, 'index'])->name('imovelIndex');
 
     //lorena -  rotas usuario
