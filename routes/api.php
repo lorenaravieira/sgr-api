@@ -62,5 +62,11 @@ Route::middleware(['auth:api','can:firewall'])->group(function(){
     Route::post('/contrato', [ContratoController::class, 'create'])->name('contratoCreate');
 
     Route::post('/Imobiliaria', [ImobiliariaController::class, 'create'])->name('imobiliariaCreate');
+    Route::post('/Imobiliaria/{id}', [ImobiliariaController::class, 'update'])->name('imobiliariaUpdate');
+    Route::get('/Imobiliaria', [ImobiliariaController::class, 'index'])->name('imobiliariaIndex');
+    Route::delete('/Imobiliaria/{id}', [ImobiliariaController::class, 'destroy'])->name('imobiliariaDestroy');
+   ;
+
+
 });
 
